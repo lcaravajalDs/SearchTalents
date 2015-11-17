@@ -15,7 +15,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ProfilePage{
-	private By sendMessageButton= By.id("tc-actions-send-message");
 	private By fullName=By.className("full-name");
 	List<String> visited= new ArrayList<String>();
 	private WebDriver driver;
@@ -23,8 +22,7 @@ public class ProfilePage{
 		this.driver=driver;
 	}
 	
-	public void waitForSendMessageButton(){
-		driver.findElement(sendMessageButton);
+	public void saveName(){
 		String name=driver.findElement(fullName).getText();
 		System.out.println("Visiting "+name+" profile");
 		visited.add(name);

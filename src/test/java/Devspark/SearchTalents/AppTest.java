@@ -33,7 +33,7 @@ public class AppTest extends BaseTest
 			ProfilePage profile=new ProfilePage(driver);
 			for (String string : results) {
 				driver.navigate().to(string);
-				profile.waitForSendMessageButton();
+				profile.saveName();
 			}
 			profile.addProfile();
 		}

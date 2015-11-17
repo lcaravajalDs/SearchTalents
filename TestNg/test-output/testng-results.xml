@@ -2,36 +2,36 @@
 <testng-results skipped="1" failed="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82275" started-at="2015-11-11T16:00:40Z" finished-at="2015-11-11T16:02:02Z">
+  <suite name="Default suite" duration-ms="128135" started-at="2015-11-16T15:51:24Z" finished-at="2015-11-16T15:53:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="82275" started-at="2015-11-11T16:00:40Z" finished-at="2015-11-11T16:02:02Z">
+    <test name="Default test" duration-ms="128135" started-at="2015-11-16T15:51:24Z" finished-at="2015-11-16T15:53:32Z">
       <class name="Devspark.SearchTalents.AppTest">
-        <test-method status="PASS" signature="ini()[pri:0, instance:Devspark.SearchTalents.AppTest@a072d8c]" name="ini" is-config="true" duration-ms="9051" started-at="2015-11-11T13:00:40Z" finished-at="2015-11-11T13:00:49Z">
+        <test-method status="PASS" signature="ini()[pri:0, instance:Devspark.SearchTalents.AppTest@1952ab2c]" name="ini" is-config="true" duration-ms="16964" started-at="2015-11-16T12:51:24Z" finished-at="2015-11-16T12:51:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ini -->
-        <test-method status="FAIL" signature="findPersons()[pri:0, instance:Devspark.SearchTalents.AppTest@a072d8c]" name="findPersons" duration-ms="73114" started-at="2015-11-11T13:00:49Z" finished-at="2015-11-11T13:02:02Z">
+        <test-method status="FAIL" signature="findPersons()[pri:0, instance:Devspark.SearchTalents.AppTest@1952ab2c]" name="findPersons" duration-ms="111060" started-at="2015-11-16T12:51:41Z" finished-at="2015-11-16T12:53:32Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[Unable to locate element: {"method":"css selector","selector":".next a"}
-Command duration or timeout: 30.11 seconds
+Command duration or timeout: 30.15 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
 System info: host: 'Lcaravajal', ip: '172.17.1.20', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_79'
 *** Element info: {Using=css selector, value=.next a}
-Session ID: f40a01fc-8ca4-4c21-99c3-27740f804847
+Session ID: 8c1f1fbb-44d1-4d33-bef8-cfa6a8669ed7
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=41.0.2}]]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":".next a"}
-Command duration or timeout: 30.11 seconds
+Command duration or timeout: 30.15 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
 System info: host: 'Lcaravajal', ip: '172.17.1.20', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_79'
 *** Element info: {Using=css selector, value=.next a}
-Session ID: f40a01fc-8ca4-4c21-99c3-27740f804847
+Session ID: 8c1f1fbb-44d1-4d33-bef8-cfa6a8669ed7
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=41.0.2}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -76,19 +76,19 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.47.1', revision: 'unknown', time: '2015-07-30 11:02:44'
 System info: host: 'Lcaravajal', ip: '172.17.1.20', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.7.0_79'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Luciano/AppData/Local/Temp/anonymous6659564512569599168webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Luciano/AppData/Local/Temp/anonymous6659564512569599168webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Luciano/AppData/Local/Temp/anonymous4376613524600954088webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10667)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/Luciano/AppData/Local/Temp/anonymous4376613524600954088webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:623)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- findPersons -->
-        <test-method status="SKIP" signature="NavigateProfiles()[pri:0, instance:Devspark.SearchTalents.AppTest@a072d8c]" name="NavigateProfiles" duration-ms="0" started-at="2015-11-11T13:02:02Z" depends-on-methods="Devspark.SearchTalents.AppTest.findPersons" finished-at="2015-11-11T13:02:02Z">
+        <test-method status="SKIP" signature="NavigateProfiles()[pri:0, instance:Devspark.SearchTalents.AppTest@1952ab2c]" name="NavigateProfiles" duration-ms="1" started-at="2015-11-16T12:53:32Z" depends-on-methods="Devspark.SearchTalents.AppTest.findPersons" finished-at="2015-11-16T12:53:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NavigateProfiles -->
-        <test-method status="PASS" signature="before()[pri:0, instance:Devspark.SearchTalents.AppTest@a072d8c]" name="before" is-config="true" duration-ms="33" started-at="2015-11-11T13:02:02Z" finished-at="2015-11-11T13:02:02Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:Devspark.SearchTalents.AppTest@1952ab2c]" name="before" is-config="true" duration-ms="25" started-at="2015-11-16T12:53:32Z" finished-at="2015-11-16T12:53:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
