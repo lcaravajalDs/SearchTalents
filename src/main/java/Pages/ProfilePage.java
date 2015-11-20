@@ -3,6 +3,7 @@ package Pages;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,19 +33,24 @@ public class ProfilePage{
 		try{
 			String cur=System.getProperty("user.home")+"\\Visitados.txt";
 			List<String> backup= new ArrayList<String>();
-			BufferedReader bufferedReader =new BufferedReader(
-			        new InputStreamReader(
-			                new FileInputStream(cur), "UTF-8"));
-			String line;
-			while ((line = bufferedReader.readLine()) != null) {
-				backup.add(line);
+			try{
+				BufferedReader bufferedReader =new BufferedReader(
+				        new InputStreamReader(
+				                new FileInputStream(cur), "UTF-8"));
+				String line;
+				while ((line = bufferedReader.readLine()) != null) {
+					backup.add(line);
+				}
+				bufferedReader.close();
+				System.out.println("Backup finished");
+				visited.addAll(backup);
 			}
-			bufferedReader.close();
-			System.out.println("Backup finished");
-			backup.addAll(visited);
+			catch(FileNotFoundException ex){}
+			
+			
 			Writer writer = new BufferedWriter(new OutputStreamWriter(
 				    new FileOutputStream(cur), "UTF-8"));
-			for (String string : backup) {
+			for (String string : visited) {
 				writer.append(string);
 			    writer.append('\n');
 			}
