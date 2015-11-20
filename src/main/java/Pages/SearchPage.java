@@ -2,6 +2,7 @@ package Pages;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -41,19 +42,25 @@ public class SearchPage{
 		Thread.sleep(2000);
 	}
 	private Boolean readed(String plink) throws IOException{
-		Boolean flag=false;;
-		String cur= System.getProperty("user.dir")+"\\src\\main\\resources\\Visitados.txt";
-		BufferedReader bufferedReader =new BufferedReader(
-		        new InputStreamReader(
-		                new FileInputStream(cur), "UTF-8"));
-		String line;
-		while ((line = bufferedReader.readLine()) != null) {
-			if(line.equals(plink)){
-				flag=true;
-				System.out.println(plink+" was already visited");
+		try{
+			Boolean flag=false;;
+			String cur=System.getProperty("user.home")+"\\Visitados.txt";
+			BufferedReader bufferedReader =new BufferedReader(
+			        new InputStreamReader(
+			                new FileInputStream(cur), "UTF-8"));
+			 
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				if(line.equals(plink)){
+					flag=true;
+					System.out.println(plink+" was already visited");
+				}
 			}
+			bufferedReader.close();
+			return flag;
 		}
-		bufferedReader.close();
-		return flag;
+		catch(FileNotFoundException ex){
+			return false;
+		}
 	}
 }
