@@ -14,6 +14,8 @@ import TestBase.BaseTest;
 public class AppTest extends BaseTest 
 {
 	List<String> results; 
+	
+	
 	@Test
 	public void findPersons() throws IOException, InterruptedException{
 		LoginPage login= new LoginPage(driver);
@@ -26,6 +28,8 @@ public class AppTest extends BaseTest
 			results.addAll(search.getResults());
 		}
 	}
+	
+	
 	@Test(dependsOnMethods="findPersons")
 	public void NavigateProfiles() throws IOException{
 		if(results.size()>=1){
