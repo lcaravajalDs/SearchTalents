@@ -45,6 +45,7 @@ public class SearchPage{
 		try{
 			Boolean flag=false;;
 			String cur=System.getProperty("user.home")+"\\Visitados.txt";
+			System.out.println(cur);
 			BufferedReader bufferedReader =new BufferedReader(
 			        new InputStreamReader(
 			                new FileInputStream(cur), "UTF-8"));
