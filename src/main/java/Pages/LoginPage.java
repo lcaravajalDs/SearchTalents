@@ -16,7 +16,7 @@ public class LoginPage{
 
 	public MainPage login(String usernamer,String password){
 		String Puser=(System.getProperty("loginUser"));
-		String Ppass=(System.getProperty("loginPassword"));
+		String Ppass=(System.getProperty("loginPass"));
 		System.out.println(Puser);
 		System.out.println(Ppass);
 		driver.findElement(user).sendKeys(Puser);
