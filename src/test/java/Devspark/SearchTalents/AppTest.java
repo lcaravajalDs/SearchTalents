@@ -19,10 +19,13 @@ public class AppTest extends BaseTest
 	@Test
 	public void findPersons() throws IOException, InterruptedException{
 		LoginPage login= new LoginPage(driver);
-		MainPage mainPage = login.login("queteimporta_301@hotmail.com", "uno23456");
+		String user=(System.getProperty("loginUser")),
+		pass=(System.getProperty("loginPass"));
+		MainPage mainPage = login.login(pass, user);
 		String query=System.getProperty("query");
 		SearchPage search = mainPage.search(query);
 		search.filterByPersons();
+		search.filterByLocation(System.getProperty("Location"));
 		results = search.getResults();
 		while(results.size()<10){
 			search.goToNextPage();

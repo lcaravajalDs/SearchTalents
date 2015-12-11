@@ -18,6 +18,7 @@ public class SearchPage{
 	private By results=By.cssSelector(".search-results .title.main-headline");
 	private By nextPage= By.cssSelector(".next a");
 	
+	
 	private WebDriver driver;
 	public SearchPage(WebDriver driver) {
 		this.driver=driver;
@@ -40,6 +41,14 @@ public class SearchPage{
 		System.out.println("Navigating to next page");
 		driver.findElement(nextPage).click();
 		Thread.sleep(2000);
+	}
+	public void filterByLocation(String loc){
+		By location=By.cssSelector(".facet-values-container label[title='"+loc+ "'] bdi");
+		driver.findElement(location).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		}
 	}
 	private Boolean readed(String plink) throws IOException{
 		try{

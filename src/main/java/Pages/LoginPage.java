@@ -14,11 +14,9 @@ public class LoginPage{
 		this.driver=driver;
 	}
 
-	public MainPage login(String usernamer,String password){
-		String Puser=(System.getProperty("loginUser")),
-		Ppass=(System.getProperty("loginPass"));
-		driver.findElement(user).sendKeys(Puser);
-		driver.findElement(pass).sendKeys(Ppass);
+	public MainPage login(String username,String password){
+		driver.findElement(user).sendKeys(username);
+		driver.findElement(pass).sendKeys(password);
 		driver.findElement(button).click();
 		System.out.println("Navigating to the Main Page");
 		return new MainPage(driver);
