@@ -21,7 +21,7 @@ public class AppTest extends BaseTest
 		LoginPage login= new LoginPage(driver);
 		String user=(System.getProperty("loginUser")),
 		pass=(System.getProperty("loginPass"));
-		MainPage mainPage = login.login(pass, user);
+		MainPage mainPage = login.login(user,pass);
 		String query=System.getProperty("query");
 		System.out.println(query);
 		SearchPage search = mainPage.search(query);
