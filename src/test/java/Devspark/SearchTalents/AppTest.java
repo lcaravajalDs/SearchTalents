@@ -23,6 +23,7 @@ public class AppTest extends BaseTest
 		pass=(System.getProperty("loginPass"));
 		MainPage mainPage = login.login(pass, user);
 		String query=System.getProperty("query");
+		System.out.println(query);
 		SearchPage search = mainPage.search(query);
 		search.filterByPersons();
 		search.filterByLocation(System.getProperty("Location"));
