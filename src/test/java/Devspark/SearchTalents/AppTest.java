@@ -20,7 +20,8 @@ public class AppTest extends BaseTest
 	public void findPersons() throws IOException, InterruptedException{
 		LoginPage login= new LoginPage(driver);
 		MainPage mainPage = login.login("queteimporta_301@hotmail.com", "uno23456");
-		SearchPage search = mainPage.search("Devspark");
+		String query=System.getProperty("query");
+		SearchPage search = mainPage.search(query);
 		search.filterByPersons();
 		results = search.getResults();
 		while(results.size()<10){
