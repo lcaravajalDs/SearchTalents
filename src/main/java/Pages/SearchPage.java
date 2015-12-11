@@ -43,6 +43,7 @@ public class SearchPage{
 		Thread.sleep(2000);
 	}
 	public void filterByLocation(String loc){
+		System.out.println("Filter by location: "+loc);
 		By location=By.cssSelector(".facet-values-container label[title='"+loc+ "'] bdi");
 		driver.findElement(location).click();
 		try {

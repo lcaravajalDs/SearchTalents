@@ -26,7 +26,8 @@ public class AppTest extends BaseTest
 		System.out.println(query);
 		SearchPage search = mainPage.search(query);
 		search.filterByPersons();
-		search.filterByLocation(System.getProperty("Location"));
+		String loc=System.getProperty("Location");
+		search.filterByLocation(loc);
 		results = search.getResults();
 		while(results.size()<10){
 			search.goToNextPage();
