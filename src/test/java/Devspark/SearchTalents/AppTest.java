@@ -24,7 +24,8 @@ public class AppTest extends BaseTest
 		MainPage mainPage = login.login(user,pass);
 		SearchPage search = mainPage.search(query);
 		search.filterByPersons();
-		search.filterByLocation(loc.split(","));
+		if(loc!=null && loc!=" ")	
+			search.filterByLocation(loc.split(","));
 		results = search.getResults();
 		while(results.size()<10){
 			search.goToNextPage();
