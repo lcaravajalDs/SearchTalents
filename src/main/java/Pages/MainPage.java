@@ -14,6 +14,7 @@ public class MainPage{
 	
 	
 	public SearchPage search(String query){
+		System.out.println("Searching: "+query);
 		driver.findElement(searchField).sendKeys(query);
 		driver.findElement(searchField).sendKeys(Keys.RETURN);
 		System.out.println("Navigating to the search results");
