@@ -16,6 +16,7 @@ public class AppTest extends BaseTest
 			pass=(System.getProperty("loginPass")),
 			query=System.getProperty("query"),
 			loc=System.getProperty("location");
+			Integer profiles=Integer.parseInt(System.getProperty("profiles"));
 	
 	
 	@Test
@@ -23,11 +24,13 @@ public class AppTest extends BaseTest
 		LoginPage login= new LoginPage(driver);
 		MainPage mainPage = login.login(user,pass);
 		SearchPage search = mainPage.search(query);
+		
 		search.filterByPersons();
+		
 		if(loc!=null && loc!=" ")	
 			search.filterByLocation(loc.split(","));
 		results = search.getResults();
-		while(results.size()<10){
+		while(results.size()<profiles){
 			search.goToNextPage();
 			results.addAll(search.getResults());
 		}
