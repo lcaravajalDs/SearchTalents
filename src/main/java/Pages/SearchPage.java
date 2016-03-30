@@ -60,7 +60,7 @@ public class SearchPage{
 	private Boolean readed(String plink) throws IOException{
 		try{
 			Boolean flag=false;;
-			String cur=System.getProperty("user.home")+"\\Visitados.txt";
+			String cur=System.getProperty("user.home")+"/Visited.txt";
 			BufferedReader bufferedReader =new BufferedReader(
 			        new InputStreamReader(
 			                new FileInputStream(cur), "UTF-8"));
