@@ -38,9 +38,7 @@ public class ProfilePage{
 				        new InputStreamReader(
 				                new FileInputStream(cur), "UTF-8"));
 				String line;
-				System.out.println("Buffer reader created");
 				while ((line = bufferedReader.readLine()) != null) {
-					System.out.println("Line readed");
 					backup.add(line);
 				}
 				bufferedReader.close();
