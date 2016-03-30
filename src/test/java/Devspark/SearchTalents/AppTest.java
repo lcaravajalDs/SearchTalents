@@ -28,7 +28,7 @@ public class AppTest extends BaseTest
 		search.filterByPersons();
 		
 		if(loc!=null && loc!=" ")	
-			search.filterByLocation(loc.split(","));
+		//	search.filterByLocation(loc.split(","));
 		results = search.getResults();
 		while(results.size()<profiles){
 			search.goToNextPage();
