@@ -68,6 +68,7 @@ public class SearchPage{
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
 				if(line.equals(plink)){
+					System.out.println("In file exists: "+line);
 					flag=true;
 					System.out.println(plink+" was already visited");
 				}

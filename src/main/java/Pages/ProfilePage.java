@@ -31,7 +31,7 @@ public class ProfilePage{
 	
 	public void addProfile() throws IOException{
 		try{
-			String cur=System.getProperty("user.home")+"\\Visitados.txt";
+			String cur=System.getProperty("user.home")+"/Visitados.txt";
 			List<String> backup= new ArrayList<String>();
 			try{
 				BufferedReader bufferedReader =new BufferedReader(

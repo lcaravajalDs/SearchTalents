@@ -12,15 +12,15 @@ import TestBase.BaseTest;
 public class AppTest extends BaseTest 
 {
 	List<String> results; 
-	String user=(System.getProperty("loginUser")),
-			pass=(System.getProperty("loginPass")),
-			query=System.getProperty("query"),
-			loc=System.getProperty("location");
-			Integer profiles=Integer.parseInt(System.getProperty("profiles"));
+	String user=System.getProperty("loginUser"),
+		pass=(System.getProperty("loginPass")),
+		query=System.getProperty("query"),
+		loc=System.getProperty("location");
+	Integer profiles=Integer.parseInt(System.getProperty("profiles"));
 	
 	
 	@Test
-	public void findPersons() throws IOException, InterruptedException{
+	public void findPersons() throws Exception{
 		LoginPage login= new LoginPage(driver);
 		MainPage mainPage = login.login(user,pass);
 		SearchPage search = mainPage.search(query);
