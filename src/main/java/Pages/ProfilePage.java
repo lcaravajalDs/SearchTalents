@@ -31,7 +31,7 @@ public class ProfilePage{
 	
 	public void addProfile() throws IOException{
 		try{
-			String cur=System.getProperty("user.home")+"/Visitados.txt";
+			String cur=System.getProperty("user.home")+"/Visited.txt";
 			List<String> backup= new ArrayList<String>();
 			try{
 				BufferedReader bufferedReader =new BufferedReader(
@@ -45,7 +45,9 @@ public class ProfilePage{
 				System.out.println("Backup finished");
 				visited.addAll(backup);
 			}
-			catch(FileNotFoundException ex){}
+			catch(FileNotFoundException ex){
+				System.out.println("File not found");
+			}
 			
 			
 			Writer writer = new BufferedWriter(new OutputStreamWriter(
