@@ -30,7 +30,7 @@ public class MainPage{
 		} catch (NoSuchElementException e) {
 			if(driver.findElement(pincode).isDisplayed()){
 				System.out.println("Pin code was requested");
-				Thread.sleep(3600000);
+				Thread.sleep(1600000);
 				String code=getCode();
 				driver.findElement(pincode).sendKeys(code+Keys.ENTER);
 			}else{
@@ -50,7 +50,7 @@ public class MainPage{
 	
 	
 	private String getCode() throws IOException{
-		String cur=System.getProperty("user.home")+"\\code.txt";
+		String cur=System.getProperty("user.home")+"//code.txt";
 		BufferedReader bufferedReader =new BufferedReader(
 		        new InputStreamReader(
 		                new FileInputStream(cur), "UTF-8"));
