@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class BaseTest {
-	public WebDriver driver= new ChromeDriver();
+	public WebDriver driver= new FirefoxDriver();
 	
 	@BeforeTest
 	public void ini(){
